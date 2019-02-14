@@ -1,0 +1,23 @@
+{
+  "name": "game-of-thrones-death-pool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "browser": "src/client.js",
+  "dependencies": {
+    "fbgraph": "^1.3.0",
+    "react": "15.4.2",
+    "react-addons-perf": "15.4.2",
+    "react-addons-pure-render-mixin": "15.4.2",
+    "react-addons-update": "15.4.2",
+    "react-bootstrap": "0.31",
+    "react-dom": "15.4.2",
+    "react-mounter": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "meteor --unsafe-perm test --once --driver-package dispatch:mocha-phantomjs --port 3200",
+    "test-full": "meteor --unsafe-perm test --once --full-app --driver-package dispatch:mocha-phantomjs --port 3200",
+    "test:watch": "meteor test --driver-package practicalmeteor:mocha --port 3100"
+  }
+}

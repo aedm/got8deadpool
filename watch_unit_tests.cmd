@@ -1,0 +1,1 @@
+meteor npm run-script test:watch

@@ -1,0 +1,208 @@
+@import '/src/client/stylesheets/bootstrap-variables.less';
+@import '/src/client/stylesheets/bootstrap-mixins.less';
+
+@votetable-name-cell-width: 230px;
+@votetable-name-cell-height: 60px;
+@votetable-checkbox-size: 24px;
+@votetable-sum-cell-width: 48px;
+@votetable-avatar-size: 50px;
+@votetable-player-avatar-size: 40px;
+@votetable-padding: 8px;
+@votetable-checkbox-cell-width: @votetable-checkbox-size + 2 * @votetable-padding;
+@votetable-width: @votetable-name-cell-width + @votetable-sum-cell-width + @votetable-checkbox-cell-width;
+
+.votetable {
+  width: 100%;
+  margin: 30px auto 40px;
+  box-shadow: 0px 0px 10px -2px rgba(59, 61, 115, 0.38) !important;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  @media (min-width: @screen-xs-min) {
+    width: @votetable-width;
+    max-width: @votetable-width;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+
+  .votetable-vote {
+    .votetable-row {
+      background-color: #f5f5f5;
+    }
+    &:nth-child(2n+1) {
+      background-color: #fefefe;
+      .votetable-row {
+        background-color: #fefefe;
+      }
+    }
+    border-bottom: 1px solid #ccc;
+
+    .votetable-comment {
+      margin: 0px 5px 5px;
+      background-color: #e0e0e7;
+      font-size: 12px;
+      padding: 2px 6px 4px;
+      font-style: italic;
+    }
+  }
+
+  .votetable-row {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    min-height: @votetable-name-cell-height;
+    padding: 2px 0;
+
+    // Number of votes
+    .votetable-count {
+      text-align: right;
+      min-width: @votetable-sum-cell-width;
+      padding: 0;
+      margin: 0;
+
+      .votetable-count-label {
+        text-align: right;
+        padding: 0px 3px;
+        border-radius: 2px;
+        color: white;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 12px;
+        margin: 0 3px 0 0;
+      }
+    }
+
+    .vote-bet-container {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+    }
+
+    .votetable-character-avatar {
+      border-radius: 4px;
+      float: right;
+      display: block;
+      margin: 3px 0 3px @votetable-padding;
+      width: @votetable-avatar-size;
+      height: @votetable-avatar-size;
+    }
+
+    // Name of the character
+    .votetable-name {
+      text-align: left;
+      padding: 0 0 0 @votetable-padding;
+      flex-grow: 1;
+
+      .votetable-status {
+        font-size: 11px;
+        border-radius: 2px;
+        display: inline-block;
+        padding: 0px 5px 1px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+
+      .votetable-alive {
+        border: 1px solid #8fe187;
+        background-color: #e1f5db;
+        color: #588856;
+      }
+
+      .votetable-dead {
+        border: 1px solid #c8828e;
+        background-color: #e5cdcf;
+        color: #6c262b;
+      }
+
+    }
+
+    .votetable-checkbox-cell {
+      padding-left: @votetable-padding;
+      padding-right: @votetable-padding * 2;
+
+      .votetable-score {
+        display: inline-block;
+        padding-left: 5px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .votetable-score-positive {
+        color: green;
+      }
+      .votetable-score-negative {
+        color: red;
+      }
+    }
+  }
+
+  // List of friends who voted the same
+  div.votetable-friends-list {
+    @media (max-width: @screen-xs-min) {
+      display: none;
+    }
+
+    text-align: left;
+    width: 50%;
+    height: @votetable-name-cell-height;
+    position: absolute;
+    right: 0;
+    padding-left: @votetable-width / 2 - @votetable-player-avatar-size;
+    padding-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 0;
+
+    img.votetable-avatar {
+      border-radius: @votetable-player-avatar-size;
+      width: @votetable-player-avatar-size;
+      height: @votetable-player-avatar-size;
+      border: 2px solid #ffffff;
+      box-shadow: 2px 2px 8px -1px #5c5c5c;
+      margin-right: -10px;
+      position: relative;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    img.votetable-avatar-self {
+      margin-left: -5px;
+      margin-right: 15px;
+      @media (min-width: @screen-sm-min) {
+        transition: margin .35s ease-in-out;
+      }
+
+      &.votetable-voted {
+        margin-left: @votetable-player-avatar-size + 10px;
+        margin-right: -10px;
+      }
+    }
+  }
+}
+
+h2 {
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.login {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.character-column {
+  padding: 0;
+  margin: 0;
+  @media (min-width: @screen-xs-min) {
+    .make-md-column(4);
+  }
+}

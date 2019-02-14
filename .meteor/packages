@@ -1,0 +1,44 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+## Meteor core
+meteor-base
+mongo
+tracker
+static-html
+shell-server
+
+## Build tools
+standard-minifier-css
+standard-minifier-js
+ecmascript
+es5-shim
+
+## Data tools
+aldeed:simple-schema
+aldeed:collection2
+reywood:publish-composite
+react-meteor-data
+
+## Webapp basics
+kadira:flow-router
+accounts-facebook
+alanning:roles
+
+## Style
+less
+huttonr:bootstrap3
+
+## Testing
+dispatch:mocha-phantomjs
+practicalmeteor:chai
+practicalmeteor:sinon
+practicalmeteor:mocha
+xolvio:cleaner
+
+## Others
+okgrow:analytics
+jquery

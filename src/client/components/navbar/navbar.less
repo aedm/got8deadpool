@@ -1,0 +1,136 @@
+@import '/src/client/stylesheets/bootstrap-variables.less';
+
+@max-width: @screen-sm;
+@collapse-width: @screen-xs;
+@sidemenu-width: 180px;
+@sidemenu-spacing: 20px;
+@nav-height: @navbar-height;
+
+nav.nav-bar {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  div.nav-insidebar {
+    max-width: @max-width;
+    height: @nav-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 auto;
+
+    .nav-closesidebar {
+      display: none;
+    }
+  }
+
+  div.nav-opensidebar {
+    display: none;
+  }
+
+  div.nav-group {
+    display: flex;
+    align-items: stretch;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+
+      padding: 0px 15px;
+      color: #c1c1c1;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s linear, color 0.2s linear;
+
+      &.nav-item-active {
+        border-bottom: 2px solid orange;
+        color: white;
+      }
+
+      &:hover {
+        background-color: rgba(0, 188, 255, 0.3);
+        color: white;
+      }
+
+      &:active, &:hover, &:link, &:visited {
+        text-decoration: none;
+      }
+    }
+
+    &.nav-group-left {
+      text-align: left;
+    }
+
+    &.nav-group-right {
+      text-align: right;
+    }
+  }
+}
+
+// Mobile menu
+@media (max-width: @collapse-width) {
+  nav.nav-bar {
+    background-color: transparent;
+    text-align: right;
+
+    div.nav-opensidebar {
+      position: relative;
+      color: grey;
+      display: inline-block;
+      padding: 5px 7px 1px;
+      border: 1px solid #4e4e4e;
+      top: @sidemenu-spacing;
+      right: @sidemenu-spacing;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    div.nav-insidebar {
+      display: block;
+      position: fixed;
+      padding: 0;
+      top: 0;
+      right: 0;
+      transition: right 0.3s ease-in-out;
+      height: 100%;
+      width: @sidemenu-width;
+      background-color: black;
+      text-align: right;
+      box-shadow: 0 0 20px black;
+
+      &.nav-hidden {
+        right: -@sidemenu-width - 20px;
+      }
+
+      .nav-closesidebar {
+        display: inline-block;
+        color: grey;
+        padding: 5px 7px 1px;
+        border: 1px solid #4e4e4e;
+        font-size: 18px;
+        margin: @sidemenu-spacing;
+        width: auto;
+        cursor: pointer;
+      }
+
+      div.nav-group {
+        display: block;
+        padding: 0;
+
+        &.nav-group-left {
+          text-align: right;
+        }
+
+        .nav-item {
+          display: block;
+          padding: 10px @sidemenu-spacing;
+          border-bottom: none;
+
+          &.nav-item-active {
+            background-color: rgba(255, 119, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

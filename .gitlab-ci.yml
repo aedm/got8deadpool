@@ -1,0 +1,43 @@
+stages:
+  - test
+  - build
+  - deploy
+
+meteor_tests:
+  image: aedm/meteor:1.5
+  stage: test
+  script:
+  - apt-get install -y bzip2
+  - export METEOR_NO_RELEASE_CHECK=true
+  - export METEOR_ALLOW_SUPERUSER=1
+  - export NODE_ENV=development
+  - meteor npm install
+  - meteor npm run-script test
+  - meteor npm run-script test-full
+  except:
+  - release
+
+build_docker_image:
+  image: docker
+  services:
+  - docker:dind
+  stage: build
+  script:
+  - docker info
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+  #- apk add --no-cache curl
+  #- curl https://aedm.github.io/minimeteor/build.sh | sh -s registry.gitlab.com/aedm/got7-death-pool:$CI_BUILD_REF registry.gitlab.com/aedm/got7-death-pool:latest
+  - docker build -t registry.gitlab.com/aedm/got7-death-pool:$CI_BUILD_REF -t registry.gitlab.com/aedm/got7-death-pool:latest .
+  - docker push registry.gitlab.com/aedm/got7-death-pool:$CI_BUILD_REF
+  - docker push registry.gitlab.com/aedm/got7-death-pool:latest
+  only:
+  - release
+
+deploy_to_aedm_us:
+  image: sequenceiq/alpine-curl
+  stage: deploy
+  script:
+  - curl $AEDM_US_DEPLOY_URL?token=$AEDM_US_DEPLOY_TOKEN
+  only:
+  - release
+

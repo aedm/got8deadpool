@@ -1,0 +1,36 @@
+@import '/src/client/stylesheets/bootstrap-variables.less';
+
+.login-button {
+  margin: 0px 10px 0;
+}
+
+.game-title {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: -(@navbar-height + @navbar-margin-bottom + 2px);
+  padding-top: 100px;
+  text-transform: uppercase;
+  padding-bottom: 120px;
+  margin-bottom: 20px;
+  background: url('/asset/ned.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.votetable-rotate-warning {
+  border: 2px solid #679ccc;
+  border-radius: 3px;
+  padding: 15px;
+  margin: 0px 20px 40px;
+  background-color: #d9e4f5;
+  display: block;
+
+  @media (min-width: @screen-xs-min) {
+    display: none;
+  }
+}
+
+h2.table-header {
+  padding-top: 30px;
+}
