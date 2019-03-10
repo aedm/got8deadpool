@@ -45,19 +45,9 @@ export const ThreePointCharacters = [
     name: "Lord Varys",
   },
   {
-    token: "pb",
-    points: 3,
-    name: "Petyr Baelish",
-  },
-  {
     token: "tg",
     points: 3,
     name: "Theon Greyjoy",
-  },
-  {
-    token: "ot",
-    points: 3,
-    name: "Olenna Tyrell",
   },
   {
     token: "es",
@@ -77,7 +67,7 @@ export const ThreePointCharacters = [
   {
     token: "dr",
     points: 3,
-    name: "Any dragon",
+    name: "Any living dragon",
   },
 ];
 
@@ -86,7 +76,7 @@ export const TwoPointCharacters = [
   {
     token: "jm",
     points: 2,
-    name: "Jorah Mormont",
+    name: "Ser Jorah Mormont",
   },
   {
     token: "gw",
@@ -158,19 +148,9 @@ export const TwoPointCharacters = [
     points: 2,
     name: "Melisandre",
   },
-  {
-    token: "ts",
-    points: 2,
-    name: "Tyene Sand",
-  },
 ];
 
 export const OnePointCharacters = [
-  {
-    token: "be",
-    points: 1,
-    name: "Benjen Stark",
-  },
   {
     token: "mi",
     points: 1,
@@ -217,16 +197,6 @@ export const OnePointCharacters = [
     name: "Edmure Tully",
   },
   {
-    token: "os",
-    points: 1,
-    name: "Obara Sand",
-  },
-  {
-    token: "ns",
-    points: 1,
-    name: "Nymeria Sand",
-  },
-  {
     token: "qy",
     points: 1,
     name: "Qyburn",
@@ -237,11 +207,6 @@ export const OnePointCharacters = [
     name: "Robin Arryn",
   },
   {
-    token: "rt",
-    points: 1,
-    name: "Randyll Tarly",
-  },
-  {
     token: "ge",
     points: 1,
     name: "Gendry",
@@ -250,114 +215,254 @@ export const OnePointCharacters = [
 
 export const TwoPointEvents = [
   {
-    token: "1",
+    token: "01",
     points: 2,
-    name: "Jon Snow learns he's a Targaryen",
+    name: "Bran is the Night King",
   },
   {
-    token: "2",
+    token: "02",
     points: 2,
-    name: "Hodor becomes a White Walker",
+    name: "Bran built the Wall",
   },
   {
-    token: "3",
+    token: "03",
     points: 2,
-    name: "Grey Worm fights The Mountain",
+    name: "Bran's the reason the Mad King became mad",
   },
   {
-    token: "4",
+    token: "04",
     points: 2,
-    name: "Cleganebowl! The Hound fights The Mountain",
+    name: "The Night King is a Stark",
   },
   {
-    token: "5",
+    token: "05",
     points: 2,
-    name: "A dragon kills Cersei",
+    name: "Samwell Tarly is Azor Ahai, \"the Prince That Was Promised\"",
   },
   {
-    token: "6",
+    token: "06",
     points: 2,
-    name: "Jaime kills Cersei",
+    name: "Jon Snow is \"the Prince That Was Promised\"",
   },
   {
-    token: "7",
+    token: "07",
     points: 2,
-    name: "Arya kills more than two people",
+    name: "Daenerys is \"the Prince That Was Promised\"",
   },
   {
-    token: "8",
+    token: "08",
     points: 2,
-    name: "Bran wargs into someone from the lists above",
+    name: "Ned Stark is alive",
   },
   {
-    token: "9",
+    token: "09",
     points: 2,
-    name: "Jon Snow has a twin",
+    name: "Tyrion is a Targaryen",
   },
   {
     token: "10",
     points: 2,
-    name: "Jon Snow kisses Daenerys",
+    name: "Tyrion made a deal with Cersei, betrays Daenerys",
   },
   {
     token: "11",
     points: 2,
-    name: "A White Walker crosses the wall",
+    name: "Arya wears the face of Littlefinger",
   },
   {
     token: "12",
     points: 2,
-    name: "The wall falls down",
+    name: "Sam is the one telling the whole story",
   },
   {
     token: "13",
     points: 2,
-    name: "Sam fights using his father's sword",
+    name: "White Walkers win in the end",
   },
   {
     token: "14",
     points: 2,
-    name: "Catelyn Stark is alive",
+    name: "Jon Snow and Cersei will get married",
   },
   {
     token: "15",
     points: 2,
-    name: "Arya meets her direwolf again",
+    name: "Jon Snow and Daenerys will get married",
   },
   {
     token: "16",
     points: 2,
-    name: "Gendry is back",
+    name: "Euron Greyjoy is the father of Cersei's unborn baby",
   },
   {
     token: "17",
     points: 2,
-    name: "Someone other than Daenerys rides a dragon",
+    name: "Varys is a merman",
   },
   {
     token: "18",
     points: 2,
-    name: "Jorah Mormont's greyscale heals/stops",
+    name: "Sansa is pregnant with Ramsay Bolton's baby",
   },
   {
     token: "19",
     points: 2,
-    name: "Someone calls Cersei 'The Mad Queen'",
+    name: "Jon Snow learns he's a Targaryen",
   },
   {
     token: "20",
     points: 2,
-    name: "Sansa marries Littlefinger",
+    name: "Hodor becomes a White Walker",
   },
   {
     token: "21",
     points: 2,
-    name: "All remaining Starks at one place",
+    name: "Grey Worm fights The Mountain",
   },
   {
     token: "22",
     points: 2,
+    name: "Cleganebowl! The Hound fights The Mountain",
+  },
+  {
+    token: "23",
+    points: 2,
+    name: "A dragon kills Cersei",
+  },
+  {
+    token: "24",
+    points: 2,
+    name: "Jaime kills Cersei",
+  },
+  {
+    token: "25",
+    points: 2,
+    name: "Bran wargs into someone from the lists above",
+  },
+  {
+    token: "26",
+    points: 2,
+    name: "Sam fights using his father's sword",
+  },
+  {
+    token: "27",
+    points: 2,
+    name: "Catelyn Stark is alive",
+  },
+  {
+    token: "28",
+    points: 2,
+    name: "Someone other than Daenerys rides a living dragon",
+  },
+  {
+    token: "29",
+    points: 2,
+    name: "Someone calls Cersei 'The Mad Queen'",
+  },
+  {
+    token: "30",
+    points: 2,
+    name: "All remaining Starks at one place",
+  },
+  {
+    token: "31",
+    points: 2,
     name: "Someone drinks white wine",
+  },
+  {
+    token: "32",
+    points: 2,
+    name: "Cersei seizes the Iron Bank",
+  },
+  {
+    token: "33",
+    points: 2,
+    name: "The Iron Bank betrays Cersei",
+  },
+  {
+    token: "34",
+    points: 2,
+    name: "The Night King attacks King's Landing first, not the North",
+  },
+  {
+    token: "35",
+    points: 2,
+    name: "Jon Snow will resurrect again",
+  },
+  {
+    token: "36",
+    points: 2,
+    name: "Bran fights the Night King on a mental battleground",
+  },
+  {
+    token: "37",
+    points: 2,
+    name: "Wildfire is used again",
+  },
+  {
+    token: "38",
+    points: 2,
+    name: "Missandei betrays Daenerys",
+  },
+  {
+    token: "39",
+    points: 2,
+    name: "Viserion returns to Daenerys’s side",
+  },
+  {
+    token: "40",
+    points: 2,
+    name: "A new dragon appears",
+  },
+  {
+    token: "41",
+    points: 2,
+    name: "A dead Stark is resurrected",
+  },
+  {
+    token: "42",
+    points: 2,
+    name: "Daenerys gets pregnant",
+  },
+  {
+    token: "43",
+    points: 2,
+    name: "White walkers die when the Night King dies",
+  },
+  {
+    token: "44",
+    points: 2,
+    name: "Arya uses Jaime's face to kill Cersei",
+  },
+  {
+    token: "45",
+    points: 2,
+    name: "Khal Drogo is resurrected",
+  },
+  {
+    token: "46",
+    points: 2,
+    name: "All humans die",
+  },
+  {
+    token: "47",
+    points: 2,
+    name: "Arya sits on the Iron Throne",
+  },
+  {
+    token: "48",
+    points: 2,
+    name: "A new wall of dragonglass gets built",
+  },
+  {
+    token: "49",
+    points: 2,
+    name: "The Iron Throne is destroyed",
+  },
+  {
+    token: "50",
+    points: 2,
+    name: "Gendry becomes the King",
   },
 ];
 
