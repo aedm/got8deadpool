@@ -86,15 +86,15 @@ class _VoteTable extends React.Component {
     return <div className="container">
       <div className="row">
         <div className="character-column">
-          <h2>Triple score</h2>
+          <h2>Triple score characters</h2>
           {this.renderBetArray(ThreePointCharacters, true)}
         </div>
         <div className="character-column">
-          <h2>Double score</h2>
+          <h2>Double score characters</h2>
           {this.renderBetArray(TwoPointCharacters, true)}
         </div>
         <div className="character-column">
-          <h2>Others</h2>
+          <h2>Other<br/>characters</h2>
           {this.renderBetArray(OnePointCharacters, true)}
         </div>
       </div>

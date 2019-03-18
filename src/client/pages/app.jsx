@@ -36,7 +36,7 @@ class App_ extends React.Component {
 
     return <div>
       <Header selectedHeaderPage={this.props.selectedHeaderPage}/>
-      <div className="game-title">Season 7 Dead Pool</div>
+      <div className="game-title">Season 8 Dead Pool</div>
       { this.props.content(this.props.subReady) }
     </div>;
   }

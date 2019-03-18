@@ -1,4 +1,4 @@
-# Game of Thrones season 7 dead pool
+# Game of Thrones season 8 dead pool
 http://got.aedm.us
 
 #### Running the webapp

@@ -50,11 +50,6 @@ export const ThreePointCharacters = [
     name: "Theon Greyjoy",
   },
   {
-    token: "es",
-    points: 3,
-    name: "Ellaria Sand",
-  },
-  {
     token: "sc",
     points: 3,
     name: "Sandor Clegane",
@@ -74,6 +69,11 @@ export const ThreePointCharacters = [
 
 export const TwoPointCharacters = [
   {
+    token: "me",
+    points: 2,
+    name: "Melisandre",
+  },
+  {
     token: "jm",
     points: 2,
     name: "Ser Jorah Mormont",
@@ -87,11 +87,6 @@ export const TwoPointCharacters = [
     token: "gc",
     points: 2,
     name: "Gregor Clegane",
-  },
-  {
-    token: "br",
-    points: 2,
-    name: "Bronn",
   },
   {
     token: "ag",
@@ -114,9 +109,9 @@ export const TwoPointCharacters = [
     name: "Ghost",
   },
   {
-    token: "et",
+    token: "br",
     points: 2,
-    name: "Eddison Tollett",
+    name: "Bronn",
   },
   {
     token: "to",
@@ -134,19 +129,9 @@ export const TwoPointCharacters = [
     name: "Brienne of Tarth",
   },
   {
-    token: "mr",
-    points: 2,
-    name: "Meera Reed",
-  },
-  {
     token: "bd",
     points: 2,
     name: "Beric Dondarrion",
-  },
-  {
-    token: "me",
-    points: 2,
-    name: "Melisandre",
   },
 ];
 
@@ -192,24 +177,29 @@ export const OnePointCharacters = [
     name: "Lyanna Mormont",
   },
   {
-    token: "ed",
-    points: 1,
-    name: "Edmure Tully",
-  },
-  {
     token: "qy",
     points: 1,
     name: "Qyburn",
   },
   {
-    token: "ra",
-    points: 1,
-    name: "Robin Arryn",
-  },
-  {
     token: "ge",
     points: 1,
     name: "Gendry",
+  },
+  {
+    token: "es",
+    points: 1,
+    name: "Ellaria Sand",
+  },
+  {
+    token: "mr",
+    points: 1,
+    name: "Meera Reed",
+  },
+  {
+    token: "et",
+    points: 1,
+    name: "Eddison Tollett",
   },
 ];
 

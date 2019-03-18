@@ -30,15 +30,9 @@ export class _GamePage extends React.Component {
     if (this.props.gameProgress.isSeasonOver) {
       return <div className="gameinfo-box">
         <h2>Game over</h2>
-        <p>All episodes of season 7 have been aired.
+        <p>All episodes of season 8 have been aired.
           {!!this.props.player ?
             <span> See your final scores on the <a href={resultsURL}>results page</a>.</span> : ""}
-        </p>
-        <h2>What's going to happen in Season 8?</h2>
-        <p>We need new events to vote for in Season 8 Dead Pool! What do you think will happen?
-          Please leave your crazy predictions on
-          our <a href="https://www.facebook.com/gotdeadpool/">Facebook Page</a>, and your
-          suggestions might be part of the game next time. :)
         </p>
       </div>;
     }
@@ -46,7 +40,7 @@ export class _GamePage extends React.Component {
     if (!this.props.gameProgress.isVotingClosed || !this.props.user) {
       return <div className="gameinfo-box">
         <h2>What's this game about?</h2>
-        <p>Predict who dies in season 7 of Game of Thrones
+        <p>Predict who dies in season 8 of Game of Thrones
           and compete against others.</p>
         <p>Voting was closed right before the season started. Scores get updated after each
           episode. Your predictions are public.</p>
@@ -57,7 +51,7 @@ export class _GamePage extends React.Component {
     }
 
     let episodeMessage = (this.props.gameProgress.episode === 0)
-      ? "before season 7" : `after episode ${this.props.gameProgress.episode}`;
+      ? "before season 8" : `after episode ${this.props.gameProgress.episode}`;
 
     return <div className="gameinfo-box">
       <h2>The game is on</h2>
