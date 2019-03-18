@@ -124,7 +124,7 @@ class _VoteTable extends React.Component {
 
   renderFooter() {
     return <div className="text-center">It's better to play with friends!&nbsp;
-      <a href="http://www.facebook.com/sharer/sharer.php?u=got.aedm.us">Share on Facebook</a>.
+      <a href="http://www.facebook.com/sharer/sharer.php?u=got.aedm.io">Share on Facebook</a>.
       <br/><br/><br/><br/>
     </div>;
   }

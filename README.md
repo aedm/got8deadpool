@@ -1,5 +1,5 @@
 # Game of Thrones season 8 dead pool
-http://got.aedm.us
+http://got.aedm.io
 
 #### Running the webapp
 
