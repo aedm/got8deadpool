@@ -452,7 +452,7 @@ export const TwoPointEvents = [
   {
     token: "50",
     points: 2,
-    name: "Gendry becomes the King",
+    name: "Thanos kills half of Westeros",
   },
 ];
 
