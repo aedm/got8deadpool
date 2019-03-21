@@ -42,7 +42,7 @@ export class _GamePage extends React.Component {
         <h2>What's this game about?</h2>
         <p>Predict who dies in season 8 of Game of Thrones
           and compete against others.</p>
-        <p>Voting was closed right before the season started. Scores get updated after each
+        <p>Voting is closed right before the season starts. Scores get updated after each
           episode. Your predictions are public.</p>
         <p>It's for free and you can't win anything.</p>
         <p>This is a fan-made website, I have no affiliation with HBO, everything here is the

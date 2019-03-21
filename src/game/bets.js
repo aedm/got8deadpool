@@ -167,11 +167,6 @@ export const OnePointCharacters = [
     name: "Little Sam",
   },
   {
-    token: "tm",
-    points: 1,
-    name: "Thoros of Myr",
-  },
-  {
     token: "lm",
     points: 1,
     name: "Lyanna Mormont",
