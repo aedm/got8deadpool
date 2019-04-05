@@ -19,7 +19,7 @@ export class _GamePage extends React.Component {
     else if (!this.props.user) {
       return <div className="login-button text-center">
         <Button bsStyle="primary" onClick={() => Helpers.facebookLogin()}>
-          Log in with Facebook
+          <i className="fab fa-facebook" />&nbsp;&nbsp;Log in with Facebook
         </Button>
       </div>;
     }
