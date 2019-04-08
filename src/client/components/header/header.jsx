@@ -24,9 +24,7 @@ class Header_ extends React.Component {
       </NavGroup>
       <NavGroup right>
         { !this.props.user
-            ? <NavItem onClick={Helpers.facebookLogin}>
-                <i className="fab fa-facebook" style={{color:'#66f'}}/>&nbsp;&nbsp;Log in with Facebook
-              </NavItem>
+            ? null
             : <NavItem onClick={() => {Meteor.logout(); FlowRouter.go("/"); }}>
           <img className="header-photo"
                src={this.props.user.profile.photo || "/asset/avatar50px.jpg"}/>
